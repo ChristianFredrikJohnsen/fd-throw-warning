@@ -83,6 +83,10 @@ fn run() -> Result<ExitCode> {
     }
 
     ensure_search_pattern_is_not_a_path(&opts)?;
+    // if (opts.glob && opts.full_path) {
+    //     ensure_search_pattern_starts_with_leading_slash(&opts)?;
+    // }
+
     let pattern = &opts.pattern;
     let exprs = &opts.exprs;
     let empty = Vec::new();
